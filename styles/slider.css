@@ -1,0 +1,22 @@
+.slider {
+    bottom: 0px;
+    position: absolute;
+    right: 163px;
+    z-index: -1;
+}
+.swipper-wrapper {
+  
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-slide {
+    width: 468px;
+    height: 628px;
+}

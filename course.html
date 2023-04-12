@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/course.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/swiper.css">
+    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+</head>
+
+<body>
+    <header class="header container" style="padding-bottom: 140px;">
+        <a href="/">
+            <div class="header__logo">
+                <img src="assets/images/header-logo.svg" alt="header-logo">
+            </div>
+        </a>
+       
+        <nav class="header__nav">
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="/">Главная</a></li>
+                <li><a class="nav-link" href="course">Курсы</a></li>
+                <li><a class="nav-link" href="index">О нас</a></li>
+                <li><a class="nav-link" href="#course">Прайс</a></li>
+                <li><a class="nav-link" href="#portfolio">Портфолио</a></li>
+                <li><a class="nav-link" href="#otzivi">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="/">Главная</a></li>
+            <li><a class="menu__item" href="#course">Курсы</a></li>
+            <li><a class="menu__item" href="index">О нас</a></li>
+            <li><a class="menu__item" href="#course">Прайс</a></li>
+            <li><a class="menu__item" href="#portfolio">Портфолио</a></li>
+            <li><a class="menu__item" href="#otzivi">Отзывы</a></li>
+        </ul>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="popup">
+        <div class="modal__box">
+            <img src="assets/icons/close.svg" alt="close-btn" class="close-btn" id="#close-modal-btn" onclick="document.querySelector('.modal').classList.remove('open')">
+            <h2 class="modal-title">Записаться на обучение</h2>
+            <form action="" method="" id="modal-form" class="modal-form">
+                <div class="select">
+                    <label for="modal-course" class="course-title">Выберите курс</label>
+                    <select name="select" id="modal-course" class="modal-select" required>
+                        <option value="Курсы бровиста" name="modal-course-option" id="modal-course-option">Курсы бровиста</option>
+                        <option value="Ламинирование и Botox Курс натуральные ресницы" name="modal-course-option" id="modal-course-option">Ламинирование и Botox<br>
+                            Курс натуральные ресницы</option>
+                        <option value="2D,3D, Голливудский объём Курс объемное наращивание" name="modal-course-option" id="modal-course-option">2D,3D, Голливудский объём <br>
+                            Курс объемное наращивание</option>
+                        <option value="Базовый курс классического наращивания ресниц" name="modal-course-option" id="modal-course-option">Базовый курс классического <br> наращивания ресниц</option>
+                    </select>
+                </div>
+                <div class="name">
+                    <label for="name-select" class="name-label">Ваше имя</label>
+                    <input type="text" name="name" id="name-select" class="name-select" placeholder="Ваше имя" required>
+                </div>
+                <div class="phone">
+                    <label for="phone-select" class="phone-label">Телефон</label>
+                    <input type="text" name="phone" id="phone-select" class="phone-select" placeholder="Ваш телефон" required>
+                </div>
+                <div class="comment">
+                    <label for="comment-select" class="comment-label">Комментарий<span> (не обязательно)</span></label>
+                    <input type="text" name="comment" id="comment-select" class="comment-select" placeholder="Ваш комментарий">
+                </div>
+                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                <input data-callback='onSubmit' data-action='submit' class="modal-btn" type="submit" value="ОТПРАВИТЬ">
+                <p class="modal-conditions">Я согласен(на) на обработку моих данных <span>(подробнее)</span></p>
+            </form>
+        </div>
+    </div>
+    <!-- success modal -->
+    <div class="success-modal" id="popup">
+        <div class="modal__box success__box">
+            <img src="assets/icons/close.svg" alt="close-btn" class="close-btn" id="close-success-modal-btn" onclick="document.querySelector('.success-modal').classList.remove('open')">
+            <div class="success-modal-container">
+                <img src="assets/icons/success.svg" alt="success" class="success-modal-icon">
+                <p class="success-modal-text">
+                    Спасибо за оставленную заявку. <br> Наш администратор свяжется с <br> Вами в ближайшее время
+                </p>
+            </div>
+        </div>
+    </div>
+    <main class="main" id="main">
+        <section class="banner__section container">
+            <h1 class="banner__title">
+                Обучение <br> наращиванию ресниц
+            </h1>
+            <div class="banner__description">
+                <p class="description-sale">
+                    В нашей студии по наращиванию ресниц представлен <br> широкий ассортимент курсов для любого уровня подготовки
+                </p>
+                
+                </div>
+            </div>
+            <div class="banner">
+                <img class="banner-image-static" src="assets/images/girl5.png" alt="banner-image-static">
+            </div>
+            <div class="banner-button-container">
+                <a href="#course" class="banner-button open-module-btn">
+                    ВЫБРАТЬ КУРС    
+                    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L15.0711 8.34315C15.4616 7.95262 15.4616 7.31946 15.0711 6.92893C14.6805 6.53841 14.0474 6.53841 13.6569 6.92893L8 12.5858L2.34315 6.92893C1.95262 6.53841 1.31946 6.53841 0.928932 6.92893C0.538408 7.31946 0.538408 7.95262 0.928932 8.34315L7.29289 14.7071ZM7 0L7 14H9V0L7 0Z" fill="#E067C3"/>
+                    </svg>
+                    
+                </a>
+            </div>
+
+        </section>
+        <section class="course" id="course">
+            <div class="course__container container">
+                <div class="card__item item1">
+                    <img src="assets/images/container-image1.png" alt="item-image" class="card-image">
+                    <h3 class="card-title">Базовый курс классического <br>наращивания ресниц</h3>
+                    <div class="card-description">
+                        <p class="description-title">Программа курса, теоретическя часть:</p>
+                        <ul>
+                            <li>Особенности расположения и формы глаз</li>
+                            <li>Анатомия натуральных ресниц</li>
+                            <li>Классификация техник наращивания</li>
+                            <li>Классификация и типология материалов и инструментов<br>
+                                для работы, обустройство рабочего места мастера</li>
+                            <li>Этапы процесса наращивания</li>
+                            <li>Основы моделирования взгляда с помощью <br>наращивания</li>
+                            <li>Подбор длины, изгиба и эффекта наращивания в <br> зависимости от строения века</li>
+                            <li>Особенности работы с различными типами ресниц</li>
+                            <li>Правила ухода за наращенными ресницами</li>
+                            <li>Коррекция ресниц. Снятие наращенных ресниц</li>
+                            <li>Противопоказания при наращивании</li>
+                            <li>Дезинфекция и стерилизация</li>
+                        </ul>
+                        <p class="description-subtitle">Практическая часть:</p>
+                        <ul>
+                            <li>Отработка полученных навыков на модели под <br>руководством инструктора</li>
+                            <li>Фотографирование работы. Разбор ракурсов</li>
+                        </ul>
+                        <p class="description-subtitle">На курс предоставляется:</p>
+                        <ul>
+                            <li>Модель предоставляется только для иногородних<br>
+                                (участие модели бесплатное)</li>
+                            <li>Материалы для наращивания ресниц</li>
+                        </ul>
+                        <p class="description-subtitle">По окончанию курса:</p>
+                        <ul>
+                            <li>Выдаётся сертификат</li>
+                            <li>Гид начинающего мастера с дополнительной <br> актуальной информацией</li>
+                            <li>Онлайн консультации и рекомендации от инструктора <br> по первым отработкам учениц после
+                                курса</li>
+                        </ul>
+                        <hr class="description-line">
+                        <div class="description-price">
+                            <p class="price-text">Стоимость обучения на курсе <img src="assets/icons/sale.svg"
+                                    alt="sale-icon"></p>
+                            <p class="price-sale">
+                                <span>10 000</span>
+                                8000 рублей
+                            </p>
+                            <button href="#" class="price-button" onclick="document.querySelector('.modal').classList.add('open')">ЗАПИСАТЬСЯ НА КУРС</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__item item2">
+                    <img src="assets/images/container-image2.png" alt="item-image" class="card-image">
+                    <h3 class="card-title">2D,3D, Голливудский объём<br>Курс объемное наращивание</h3>
+                    <p class="card-subtitle">Курс для мастеров с опытом классического наращивания</p>
+                    <div class="card-description">
+                        <p class="description-title">Программа курса, 1 день:</p>
+                        <ul>
+                            <li>
+                                Материаловедение. Химический состав и принцип<br> действия препаратов, используемых для
+                                наращивания<br> ресниц</li>
+                            <li>Инструмент специалиста по наращиванию ресниц.</li>
+                            <li>Как выбрать пинцет для объёмного наращивания.</li>
+                            <li>Правила дезинфекции и стерилизации по СанПиН и <br> ГОСТ</li>
+                            <li>Правила работы с клеем и постановкой искусственных <br> ресниц для продления устойчивого
+                                результата <br> наращивания ресниц.</li>
+                            <li>Способы контроля полимеризации клея</li>
+                            <li>Правила работы с натуральными ресницами: <br> вертикальные и горизонтальные ряды,
+                                наращивание по <br> стадиям роста</li>
+                            <li>Создание ровного ресничного края, правила перехода <br> между длинами и изгибами.
+                                Сочетаемость изгибов</li>
+                            <li>Сонаправленность и параллельность наращённых <br> ресниц</li>
+                            <li>Правила работы с искусственными ресницами: выбор <br> типа ресниц, бренда, изгиба,
+                                толщины, длины и объёма, <br> в зависимости от потребностей специалиста и клиента</li>
+                            <li>Здоровье мастера, защита от воздействия испарений <br> клея. Здоровье и безопасность
+                                клиента, <br> предотвращение покраснения слизистых оболочек глаз</li>
+                            <li>Основы моделирования. Алгоритм построения <br> основных схем наращивания, работа с
+                                точками падения <br> века, анализ анатомического строения глаз клиента, <br> для
+                                нахождения оптимального варианта наращивания <br> ресниц.</li>
+                            <li>Цветокоррекция в зависимости от контрастного типа <br> клиента</li>
+                            <li>Техники формирования пучка для объемного <br>наращивания ресниц. Выбор оптимального
+                                способа</li>
+                            <li>Форма и размер пучка. Тонкости формирования <br> основания пучка, для предотвращения его
+                                схлопывания</li>
+                            <li>Демонстрация инструктором формирования пучка,<br> Практическая отработка техники под
+                                контролем <br> инструктора</li>
+                        </ul>
+                        <p class="description-subtitle">Программа курса, 2 день:</p>
+                        <ul>
+                            <li>Работа с моделью. Применение полученных знаний</li>
+
+                        </ul>
+                        <p class="description-subtitle">С собой на курсе иметь:</p>
+                        <ul>
+                            <li>Ручка</li>
+                            <li>Блокнот</li>
+                            <li>Пинцеты (прямой, изогнутый)</li>
+                        </ul>
+                        <p class="description-subtitle">На курс предоставляется:</p>
+                        <ul>
+                            <li>Модель (участие модели бесплатное)</li>
+                            <li>Материалы для наращивания ресниц</li>
+                        </ul>
+                        <p class="description-subtitle">По окончанию курса:</p>
+                        <ul>
+                            <li>Выдаётся сертификат</li>
+                        </ul>
+                        <hr class="description-line">
+                        <div class="description-price">
+                            <p class="price-text">Стоимость обучения на курсе <img src="assets/icons/sale.svg"
+                                    alt="sale-icon"></p>
+                            <p class="price-sale">
+                                <span>13 000</span>
+                                10 000 рублей
+                            </p>
+                            <a href="#" class="price-button" onclick="document.querySelector('.modal').classList.add('open')">ЗАПИСАТЬСЯ НА КУРС</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__item item3">
+                    <img src="assets/images/container-image3.png" alt="item-image" class="card-image">
+                    <h3 class="card-title">Ламинирование и Botox<br>
+                        Курс натуральные ресницы</h3>
+                    <div class="card-description">
+                        <p class="description-title">Программа курса:</p>
+                        <ul>
+                            <li>Всё о строении и циклах роста ресниц</li>
+                            <li>О материалах, используемых для ламинирования<br> натуральных ресниц</li>
+                            <li>Компонентах и действующих веществах, входящих в <br> составы для ламинирования ресниц
+                            </li>
+                            <li>О том, какое воздействие оказывают составы для<br> ламинирования и Botox на структуру
+                                кератиновых<br> волокон ресниц</li>
+                            <li>В чем отличия между химической завивкой и <br> ламинированием (коллагенированием, <br>
+                                кератинированием и прочим)</li>
+                            <li>Что такое Botox для ресниц, его ингредиентный состав <br> и почему он бесполезен без
+                                ламинирования</li>
+                            <li>Относительные и абсолютные противопоказания к <br> процедуре ламинирования ресниц</li>
+                            <li>Правила ухода за ламинированными ресницами</li>
+                            <li>Правила гигиены на рабочем месте, дезинфекции и <br> стерилизации инструментов</li>
+
+                        </ul>
+                        <p class="description-subtitle">На курсе вы изучите:</p>
+                        <ul>
+                            <li>Как правильно подготовить ресницы клиента к <br> процедуре ламинирования</li>
+                            <li>Какой вид и размер валика выбрать, чтобы получить <br> красивый завиток и не испортить
+                                ресницы</li>
+                            <li>Какое направление выкладки ресниц на валике <br> считается верным и какова сила их
+                                натяжения при <br> приклеивании</li>
+                            <li>Правила нанесения и время выдержки составов для <br> ламинирования, красителя и ботокса
+                                в зависимости от <br> типа и направления роста ресниц</li>
+                            <li>Возможные виды инструментов, применяемых во время <br> процедуры</li>
+                            <li>Как должны выглядеть ресницы по окончании<br> процедуры и спустя 24 часа после неё</li>
+                        </ul>
+                        <p class="description-subtitle">На практике на индивидуальной модели<br>
+                            под контролем инструктора вы отработаете:</p>
+                        <ul>
+                            <li>Постановку рук</li>
+                            <li>Установку патчей и валиков</li>
+                            <li>Приклеивание и распределение ресниц на валик с<br> заданным направлением</li>
+                            <li>Верное нанесение составов, красителя и ботокса</li>
+                            <li>Создание "продающего" фото (правильный ракурс, <br> постановка света и т.д.)</li>
+                        </ul>
+                        <p class="description-subtitle">С собой на курсе иметь:</p>
+                        <ul>
+                            <li>Ручка</li>
+                            <li>Блокнот</li>
+                        </ul>
+                        <p class="description-subtitle">На курс предоставляется:</p>
+                        <ul>
+                            <li>
+                                Модель (участие модели бесплатное)</li>
+                            <li>Материалы для наращивания ресниц</li>
+                        </ul>
+                        <p class="description-subtitle">По окончанию курса:</p>
+                        <ul>
+                            <li>Выдаётся сертификат</li>
+
+                        </ul>
+                        <hr class="description-line">
+                        <div class="description-price">
+                            <p class="price-text">Стоимость обучения на курсе <img src="assets/icons/sale.svg"
+                                    alt="sale-icon"></p>
+                            <p class="price-sale">
+                                <span>10 000</span>
+                                7000 рублей
+                            </p>
+                            <button href="#" class="price-button" onclick="document.querySelector('.modal').classList.add('open')">ЗАПИСАТЬСЯ НА КУРС</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__item item4">
+                    <img src="assets/images/container-image4.png" alt="item-image" class="card-image">
+                    <h3 class="card-title">Курсы бровиста</h3>
+                    <div class="card-description">
+                        <p class="description-title">Программа курса:</p>
+                        <ul>
+                            <li>Формы лица и их влияние на брови</li>
+                            <li>Формы бровей, их строение</li>
+                            <li>Построение бровей</li>
+                            <li>Работа с ассиметрией, с проблемными бровями</li>
+                            <li>Цвет и колористика. Красители Refectocil, Элан, Brow <br> Henna, Lovely. Этапы и
+                                варианты окрашивания</li>
+                            <li>Инструменты для оформления бровей, положение рук <br> при коррекции</li>
+                            <li>Обработка инструментов, гигиена</li>
+                            <li>Работа с клиентом, макияж бровей</li>
+
+                        </ul>
+                        <p class="description-subtitle">С собой на курсе иметь:</p>
+                        <ul>
+                            <li>Ручка</li>
+                            <li>Блокнот</li>
+
+                        </ul>
+                        <p class="description-subtitle">На курс предоставляется:</p>
+                        <ul>
+                            <li>Модель (участие модели бесплатное)</li>
+                            <li>Материалы для наращивания ресниц</li>
+
+                        </ul>
+                        <p class="description-subtitle">По окончанию курса:</p>
+                        <ul>
+                            <li>Выдаётся сертификат</li>
+                        </ul>
+                        <hr class="description-line">
+                        <div class="description-price">
+                            <p class="price-text">Стоимость обучения на курсе <img src="assets/icons/sale.svg"
+                                    alt="sale-icon"></p>
+                            <p class="price-sale">
+                                <span>10 000</span>
+                                7000 рублей
+                            </p>
+                            <button href="#" class="price-button" onclick="document.querySelector('.modal').classList.add('open')">ЗАПИСАТЬСЯ НА КУРС</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-container">
+                <h3 class="portfolio-title">
+                    Наше портфолио
+                </h3>
+                <div class="portfolio-slider wrapper">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work1.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work1.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work2.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work2.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work3.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work3.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work4.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work4.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work5.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work5.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work6.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work6.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work7.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work7.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work8.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work8.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work9.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work9.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work10.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work10.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work11.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work11.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work12.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work12.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work13.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work13.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <img class="swiper-button-prev" src="assets/icons/arrow-left.svg" alt="arrow-left">
+                        <img class="swiper-button-next" src="assets/icons/arrow-right.svg" alt="arrow-right>
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="otzivi">
+            <div class="reviews-container">
+                <h3 class="reviews-title">
+                    Отзывы наших клиентов
+                </h3>
+                <div class="reviews-slider wrapper">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews1.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews1.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews2.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews2.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews3.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews3.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews4.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews4.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews5.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews5.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews6.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews6.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews7.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews7.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews8.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews8.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews9.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews9.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews10.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews10.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews11.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews11.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews12.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews12.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews13.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews13.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews14.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews14.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews15.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews15.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews16.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews16.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews17.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews17.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <img class="swiper-button-prev" src="assets/icons/arrow-left.svg" alt="arrow-left">
+                        <img class="swiper-button-next" src="assets/icons/arrow-right.svg" alt="arrow-right>
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> 
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="footer">
+            <div class="container footer-container">
+                <div class="footer__left">
+                    <iframe class="map-kudrovo"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1670.0460426281904!2d30.50909970580981!3d59.90853985662998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962e620feddd29%3A0xdc4c131202e394d1!2z0YPQuy4g0J_RgNCw0LbRgdC60LDRjywgMywg0JrRg9C00YDQvtCy0L4sINCb0LXQvdC40L3Qs9GA0LDQtNGB0LrQsNGPINC-0LHQuy4sIDE4ODY5Mg!5e0!3m2!1sru!2sru!4v1676966971474!5m2!1sru!2sru"
+                        width="514" height="514" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="footer__right">
+                    <div class="right__top">
+                        <h2 class="right__title">
+                            Адреса наших студий:
+                        </h2>
+                        <div class="logo">
+                            <a href="https://vk.com/daisy_laches"><img src="assets/icons/vk.svg" alt="vk-logo" class="right__vk"></a>
+                            <a href="https://www.instagram.com/lashmaker_salnikova/"><img src="assets/icons/instagram.svg" alt="inst-logo" class="right__inst"></a>
+                        </div>
+                        <img src="assets/icons/vasilyev-logo.svg" alt="footer-logo" class="footer-logo">
+                    </div>
+                    <div class="right__adress_dybenko">
+                        <span> Студия на Дыбенко:</span> <br>
+                        г. Санкт-Петербург, м Дыбенко, ул. Пражская, д. 3
+                    </div>
+                    <div class="right__adress_bolshevikov">
+                        <span> Студия на Большевиков:</span> <br>
+                        г. Санкт-Петербург, м. Большевиков, ул. Ворошилова 27/2
+                    </div>
+                    <div class="right__contacts">
+                        <a style="text-decoration: none" href="tel:+79006302946"><p class="contacts-number">8 (900) 630 29 46</p></a>
+                        <a href="https://dikidi.net/537247?p=1.pi-po" target="_blank" class="contacts-link">ОНЛАЙН-ЗАПИСЬ</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/fslightbox.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfidrskAAAAAHy5SaWy7sKPF2U24GaNAdJnz4eh" ></script>
+    <script src="ajax.js"></script>
+   
+    <script>
+        // grecaptcha.ready(function () {
+        //     grecaptcha.execute('6LfidrskAAAAAHy5SaWy7sKPF2U24GaNAdJnz4eh', { action: 'contact' }).then(function (token) {
+        //         var recaptchaResponse = document.getElementById('recaptchaResponse');
+        //         recaptchaResponse.value = token;
+        //         console.log(token);
+        //     });
+        // });
+    </script>
+</body>
+
+</html>

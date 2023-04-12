@@ -1,0 +1,1350 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+body {
+  background: rgba(224, 103, 195, 0.1);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 174px;
+  height: 134px;
+}
+.header__nav {
+  /* Note: backdrop-filter has minimal browser support */
+  display: flex;
+  align-items: center;
+}
+.header__nav .nav-menu {
+  border-radius: 5px;
+  background: rgba(224, 103, 195, 0.1);
+  -webkit-backdrop-filter: blur(125px);
+          backdrop-filter: blur(125px);
+  display: flex;
+  align-items: center;
+  padding: 14px 69px;
+  gap: 69px;
+}
+@media (max-width: 1060px) {
+  .header__nav .nav-menu {
+    gap: 30px;
+  }
+}
+@media (max-width: 870px) {
+  .header__nav .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.header__nav .nav-menu .nav-link {
+  text-decoration: none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  color: #000000;
+}
+.header__nav .nav-menu .nav-link:hover {
+  color: #E067C3;
+}
+
+.banner {
+  width: 100% !important;
+}
+.banner__section {
+  padding-bottom: 140px;
+}
+.banner .banner-image-static {
+  position: absolute;
+  right: 0;
+  top: -137px;
+}
+.banner__title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 46px;
+  color: #000000;
+}
+.banner-button {
+  margin-bottom: 44px;
+  border: 2px solid #E067C3;
+  box-sizing: border-box;
+  margin-top: 56px;
+  display: inline-block;
+  padding: 20px 85px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  background: #E067C3;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.banner-button:hover {
+  border: 2px solid #E067C3;
+  border-radius: 15px;
+  background: none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  color: #E067C3;
+}
+.banner__description {
+  margin-top: 31px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.banner__description .description-sale {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 26px;
+  color: #000000;
+}
+.banner__description .description-right-sale {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+.banner__description .description-right-note {
+  margin-top: 8px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #000000;
+}
+.banner__info {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: -88px;
+}
+.banner__info .info-adress-title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: right;
+  color: #000000;
+}
+.banner__info .info-adress-dybenko {
+  margin-top: 26px;
+}
+.banner__info .info-adress-dybenko .dybenko-title {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+}
+.banner__info .info-adress-dybenko .dybenko-title-bold {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #000000;
+}
+.banner__info .info-adress-dybenko .dybenko-adress {
+  margin-top: 6px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: right;
+  color: #000000;
+}
+.banner__info .info-adress-bolshevikov {
+  margin-top: 26px;
+}
+.banner__info .info-adress-bolshevikov .bolshevikov-title {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+}
+.banner__info .info-adress-bolshevikov .bolshevikov-title-bold {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #000000;
+}
+.banner__info .info-adress-bolshevikov .bolshevikov-adress {
+  margin-top: 6px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: right;
+  color: #000000;
+}
+.banner__info .info-phone {
+  margin-top: 35px;
+}
+.banner__info .info-phone .phone-title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+.banner__info .info-phone .phone-number {
+  margin-top: 7px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: right;
+  /* main pink */
+  color: #E067C3;
+}
+
+.course {
+  padding-top: 211px;
+  background: #fff;
+}
+.course .course__container {
+  display: grid;
+  grid-gap: 120px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+.course .course__container .item1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.course .course__container .item2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+.course .course__container .item3 {
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.course .course__container .item4 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+.course .course__container .card__item {
+  padding: 48px;
+  background: rgba(224, 103, 195, 0.1);
+  border-radius: 21px;
+}
+.course .course__container .card__item .card-title {
+  margin-top: 38px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+}
+.course .course__container .card__item .card-subtitle {
+  margin-top: 6px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.course .course__container .card__item .card-image {
+  width: 458px;
+  height: 263px;
+}
+.course .course__container .card__item .description-title,
+.course .course__container .card__item .description-subtitle {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+.course .course__container .card__item .description-title {
+  margin-top: 58px;
+  margin-bottom: 20px;
+}
+.course .course__container .card__item .description-subtitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.course .course__container .card__item .description-line {
+  background: #E067C3;
+  height: 1px;
+  margin-top: 29px;
+}
+.course .course__container .card__item .description-price {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+.course .course__container .card__item .description-price .price-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.course .course__container .card__item .description-price .price-sale {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  color: #000000;
+}
+.course .course__container .card__item .description-price .price-sale span {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 41px;
+  text-decoration-line: line-through;
+  color: rgba(0, 0, 0, 0.25);
+}
+.course .course__container .card__item .description-price .price-button {
+  max-width: 100% !important;
+  text-align: center !important;
+  border: 2px solid #E067C3;
+  margin-top: 29px;
+  display: inline-block;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding: 20px 99px;
+  background: #E067C3;
+  border-radius: 15px;
+  text-decoration: none;
+}
+.course .course__container .card__item .description-price .price-button:hover {
+  border: 2px solid #E067C3;
+  border-radius: 15px;
+  background: none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  color: #E067C3;
+}
+.course .course__container .card__item ul {
+  padding-left: 20px;
+}
+.course .course__container .card__item ul li {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  list-style: disc;
+  color: #000000;
+}
+
+.portfolio {
+  padding-top: 210px;
+  background: #fff;
+}
+.portfolio-container {
+  background: rgba(224, 103, 195, 0.1);
+  padding-bottom: 72px;
+}
+.portfolio-container .portfolio-title {
+  padding-top: 73px;
+  padding-bottom: 68px;
+  text-align: center;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  color: #000000;
+}
+
+.reviews .reviews-title {
+  padding-top: 73px;
+  padding-bottom: 68px;
+  text-align: center;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  color: #000000;
+}
+
+.footer {
+  background: #131012;
+  padding-bottom: 80px;
+  margin-top: 224px;
+  height: 577px;
+  box-sizing: border-box;
+}
+.footer .footer-logo {
+  width: 165px;
+  height: 27px;
+  margin-top: 87px;
+  display: block;
+  position: absolute;
+  bottom: -87px;
+  left: 0;
+}
+.footer .container {
+  position: relative;
+  display: flex;
+  gap: 86px;
+  justify-content: space-between;
+}
+.footer__left .map-kudrovo {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -130px;
+}
+.footer__left .footer-logo {
+  width: 165px;
+  height: 27px;
+  margin-top: 87px;
+  display: block;
+  position: absolute;
+  bottom: -87px;
+  left: 0;
+}
+.footer__right {
+  width: 600px;
+}
+.footer__right .right__title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+.footer__right .right__top {
+  margin-top: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__right .right__top .logo {
+  display: flex;
+  justify-content: center;
+}
+.footer__right .right__top .right__inst {
+  margin-left: 21px;
+}
+.footer__right .right__adress_dybenko {
+  margin-top: 22px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 155.6%;
+  /* or 28px */
+  color: #FFFFFF;
+}
+.footer__right .right__adress_dybenko span {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 155.6%;
+  /* or 33px */
+  color: #FFFFFF;
+}
+.footer__right .right__adress_bolshevikov {
+  margin-top: 22px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 155.6%;
+  /* or 28px */
+  color: #FFFFFF;
+}
+.footer__right .right__adress_bolshevikov span {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 155.6%;
+  /* or 33px */
+  color: #FFFFFF;
+}
+.footer__right .right__contacts {
+  margin-top: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__right .right__contacts .contacts-number {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 155.6%;
+  /* identical to box height, or 33px */
+  color: #E067C3;
+}
+.footer__right .right__contacts .contacts-link {
+  border: 2px solid #E067C3;
+  display: inline-block;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  text-decoration: none;
+  padding: 20px 60px;
+  color: #FFFFFF;
+  background: #E067C3;
+  border-radius: 15px;
+}
+.footer__right .right__contacts .contacts-link:hover {
+  border: 2px solid #E067C3;
+  border-radius: 15px;
+  background: none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  color: #E067C3;
+}
+
+.banner-button, .price-button, .contacts-link {
+  border: none;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modal-title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 166.2%;
+  /* or 58px */
+  color: #000000;
+}
+.modal__box {
+  position: relative;
+  top: -150px;
+  max-width: 500px;
+  padding: 102px 77px;
+  z-index: 1;
+  margin: 30px 15px;
+  background: white;
+  border-radius: 72px;
+  box-shadow: 0px 9px 8px 10px rgba(34, 60, 80, 0.2);
+  transform: scale(0);
+  transition: transform 0.8s;
+}
+.modal-form {
+  margin-top: 50px;
+}
+.modal .course-title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 166.2%;
+  /* identical to box height, or 42px */
+  color: #000000;
+}
+.modal .modal-select {
+  margin-top: 6px;
+  background: #F3F3F3;
+  border-radius: 14px;
+  padding: 25px 48px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 166.2%;
+  /* identical to box height, or 42px */
+  width: 100%;
+  color: rgba(0, 0, 0, 0.6);
+}
+.modal-btn {
+  display: inline-block;
+  margin-top: 44px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  border: none;
+  padding: 32px 0;
+  width: 100%;
+  color: #FFFFFF;
+  background: #E067C3;
+  border-radius: 15px;
+}
+.modal-conditions {
+  margin-top: 44px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+.modal-conditions span {
+  text-decoration: underline;
+}
+
+.open-module-btn {
+  border: none;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.open .modal__box {
+  transform: scale(0.7);
+}
+
+.close-btn {
+  width: 38px;
+  height: 36px;
+  position: absolute;
+  top: 52px;
+  right: 50px;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.success-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.success-modal .success__box {
+  padding: 102px 142px;
+  top: 0px !important;
+}
+.success-modal-container {
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.success-modal-icon {
+  width: 58px;
+  height: 46px;
+  display: inline-block;
+  margin-bottom: 54px;
+}
+.success-modal-text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166.2%;
+  /* or 37px */
+  text-align: center;
+  color: #000000;
+}
+.success-modal-title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 166.2%;
+  /* or 58px */
+  color: #000000;
+}
+.success-modal__box {
+  position: relative;
+  top: -150px;
+  max-width: 500px;
+  padding: 102px 77px;
+  z-index: 1;
+  margin: 30px 15px;
+  background: white;
+  border-radius: 72px;
+  box-shadow: 0px 9px 8px 10px rgba(34, 60, 80, 0.2);
+  transform: scale(0);
+  transition: transform 0.8s;
+}
+.success-modal-form {
+  margin-top: 50px;
+}
+.success-modal .course-title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 166.2%;
+  /* identical to box height, or 42px */
+  color: #000000;
+}
+.success-modal .modal-select {
+  margin-top: 6px;
+  background: #F3F3F3;
+  border-radius: 14px;
+  padding: 25px 48px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 166.2%;
+  /* identical to box height, or 42px */
+  width: 100%;
+  color: rgba(0, 0, 0, 0.6);
+}
+.success-modal-btn {
+  display: inline-block;
+  margin-top: 44px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+  border: none;
+  padding: 32px 0;
+  width: 100%;
+  color: #FFFFFF;
+  background: #E067C3;
+  border-radius: 15px;
+}
+.success-modal-conditions {
+  margin-top: 44px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+.success-modal-conditions span {
+  text-decoration: underline;
+}
+
+.open-module-btn {
+  border: none;
+}
+
+.success-modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.success-modal.open .modal__box {
+  transform: scale(0.7);
+}
+
+.close-btn {
+  width: 38px;
+  height: 36px;
+  position: absolute;
+  top: 52px;
+  right: 50px;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.select {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.select select {
+  background: none;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+.select::after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 16px 10px 0;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+  font-family: inherit;
+  position: absolute;
+  top: 84px;
+  right: 34px;
+  z-index: 1;
+}
+
+.phone, .name, .comment {
+  margin-top: 34px;
+}
+.phone-label, .name-label, .comment-label {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 166.2%;
+  /* identical to box height, or 42px */
+  color: #000000;
+}
+.phone-select, .name-select, .comment-select {
+  box-sizing: border-box;
+  margin-top: 6px;
+  background: #F3F3F3;
+  border-radius: 14px;
+  padding: 25px 48px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 166.2%;
+  /* identical to box height, or 42px */
+  width: 100%;
+  border: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.comment span {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 166.2%;
+  /* identical to box height, or 42px */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-btn:hover {
+  background: white;
+  color: #E067C3;
+  border: 1px solid #E067C3;
+}
+
+/* скрываем чекбокс */
+.hamburger-menu {
+  display: none;
+}
+@media (max-width: 870px) {
+  .hamburger-menu {
+    display: inline-block !important;
+  }
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center; /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+  z-index: 100 !important;
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.66);
+  -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 20px 24px;
+  color: #333;
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.banner-button {
+  border: 2px solid #E067C3 !important;
+}
+
+@media (max-width: 1460px) {
+  .banner {
+    right: 0px !important;
+  }
+}
+@media (max-width: 1260px) {
+  .banner {
+    right: 10px !important;
+  }
+}
+@media (max-width: 870px) {
+  .header__nav {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  .header {
+    gap: 30px !important;
+    justify-content: center !important;
+  }
+  .hamburger-menu {
+    display: inline-block !important;
+  }
+  .nav-menu {
+    display: none !important;
+  }
+  .container {
+    padding: 0 20px !important;
+  }
+}
+@media (max-width: 1150px) {
+  .container {
+    padding: 0px 20px 140px 20px;
+  }
+  .banner {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1090px) {
+  .nav-menu {
+    gap: 30px !important;
+  }
+  .banner-image-static {
+    width: 600px !important;
+    top: -77px !important;
+  }
+}
+@media (max-width: 870px) {
+  .nav-menu {
+    display: none !important;
+  }
+  .header {
+    justify-content: center !important;
+  }
+  .container {
+    padding: 0px 20px 0px 20px !important;
+  }
+  .banner__title {
+    text-align: center;
+  }
+  .banner__description {
+    justify-content: center;
+  }
+  .banner {
+    text-align: center;
+  }
+  .banner__info {
+    top: 260px !important;
+    right: 10% !important;
+  }
+  .banner__button {
+    margin-top: 0 !important;
+  }
+  .girl {
+    margin-top: 50px !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: static !important;
+  }
+  .banner-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 108px;
+  }
+  .banner-image-static {
+    width: 400px !important;
+    position: relative !important;
+    top: 68px !important;
+  }
+}
+@media (max-width: 692px) {
+  .banner-image-static {
+    width: 350px !important;
+  }
+}
+@media (max-width: 592px) {
+  .card-image {
+    width: 100% !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
+}
+@media (max-width: 1300px) {
+  .girl {
+    right: -29px !important;
+  }
+}
+@media (max-width: 1200px) {
+  .girl {
+    margin-top: 50px !important;
+    width: 60% !important;
+    height: auto !important;
+    position: static !important;
+  }
+  footer {
+    height: 100% !important;
+  }
+  .map-kudrovo {
+    position: static !important;
+  }
+  .footer .container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .about-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .map-kudrovo {
+    height: 400px;
+    width: 400px;
+  }
+  .footer-container {
+    align-items: center;
+  }
+}
+@media (max-width: 790px) {
+  .banner {
+    top: 0 !important;
+    right: 9% !important;
+  }
+}
+@media (max-width: 700px) {
+  .banner {
+    right: 5% !important;
+  }
+  .footer__right {
+    width: 100% !important;
+  }
+}
+@media (max-width: 770px) {
+  .right__title {
+    display: none !important;
+  }
+  .right__top {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 640px) {
+  .banner {
+    right: 0% !important;
+  }
+  .banner__info {
+    transform: scale(0.6) !important;
+    right: 0% !important;
+  }
+}
+@media (max-width: 590px) {
+  .contacts-link {
+    padding: 20px 30px !important;
+  }
+  .banner {
+    right: 0% !important;
+  }
+  .banner__info {
+    transform: scale(0.6) !important;
+    right: 0% !important;
+  }
+}
+@media (max-width: 450px) {
+  .banner {
+    right: 5% !important;
+  }
+  .banner__info {
+    transform: scale(0.6) !important;
+    right: 0% !important;
+    top: 150px !important;
+  }
+  .banner-image-static {
+    width: 350px !important;
+  }
+}
+@media (max-width: 450px) {
+  .swiper-slide-image {
+    text-align: center !important;
+    width: 300px !important;
+  }
+  .banner__info {
+    transform: scale(0.6) !important;
+    right: 0% !important;
+    top: -40px;
+  }
+  .banner-image-static {
+    width: 300px !important;
+  }
+  .banner__title {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 26px;
+    text-align: center;
+  }
+  .description-right-sale {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px !important;
+    line-height: 15px;
+  }
+  .description-right-note {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px !important;
+    line-height: 12px;
+    margin-top: 0px !important;
+    color: #000000;
+  }
+  .banner-button {
+    padding: 20px 45px !important;
+  }
+  .right__contacts {
+    flex-direction: column-reverse !important;
+    gap: 30px;
+  }
+  .footer-container {
+    gap: 40px !important;
+  }
+  .right__adress_bolshevikov, .right__adress_dybenko {
+    text-align: center !important;
+    font-size: 12px !important;
+  }
+  .right__top {
+    display: flex !important;
+  }
+  .footer-logo {
+    bottom: -60px !important;
+    left: 20px !important;
+  }
+  .footer-right {
+    width: 100% !important;
+  }
+  .card__item {
+    width: 100% !important;
+  }
+  .right__title {
+    text-align: center !important;
+  }
+  .map-kudrovo {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1360px) {
+  .course__container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+@media (max-width: 870px) {
+  .footer__right {
+    width: 100% !important;
+  }
+  .nav-menu {
+    display: none !important;
+  }
+}
+.banner-image-static {
+  z-index: -1 !important;
+}
+
+@media (max-width: 767px) {
+  .footer__right {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 1200px) {
+  .footer-logo {
+    margin-top: 0 !important;
+    position: static !important;
+    margin-left: 20px !important;
+    bottom: -60px !important;
+    left: 20px !important;
+  }
+}
+@media (max-width: 460px) {
+  .card__item {
+    padding: 20px !important;
+  }
+  .price-button {
+    padding: 20px 35px !important;
+  }
+  .modal__box {
+    margin: 0 !important;
+    padding: 20px 35px !important;
+  }
+  .modal-title {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 870px) {
+  .description-sale {
+    text-align: center !important;
+  }
+}
+@media (max-width: 470px) {
+  .price-button {
+    display: block !important;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .price-button {
+    display: block !important;
+    padding: 20px 40px !important;
+  }
+}
+@media (max-width: 370px) {
+  .price-button {
+    display: block !important;
+    padding: 20px 20px !important;
+  }
+}/*# sourceMappingURL=course.css.map */

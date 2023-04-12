@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/swiper.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+ 
+
+</head>
+
+<body>
+    <header class="header container">
+        <a href="/">
+            <div class="header__logo">
+                <img src="assets/images/header-logo.svg" alt="header-logo">
+            </div>
+        </a>
+        <nav class="header__nav">
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="/">Главная</a></li>
+                <li><a class="nav-link" href="course">Курсы</a></li>
+                <li><a class="nav-link" href="#about">О нас</a></li>
+                <li><a class="nav-link" href="#price">Прайс</a></li>
+                <li><a class="nav-link" href="#portfolio">Портфолио</a></li>
+                <li><a class="nav-link" href="#otzivi">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="/">Главная</a></li>
+            <li><a class="menu__item" href="course">Курсы</a></li>
+            <li><a class="menu__item" href="#about">О нас</a></li>
+            <li><a class="menu__item" href="#price">Прайс</a></li>
+            <li><a class="menu__item" href="#portfolio">Портфолио</a></li>
+            <li><a class="menu__item" href="#otzivi">Отзывы</a></li>
+        </ul>
+    </div>
+   
+    <main class="main">
+        <section class="banner container">
+            <h1 class="banner__title">
+                Студия моделирования взгляда<br>
+                и оформление бровей
+            </h1>
+            <div class="banner__description">
+                <p class="description-sale">
+                    10%
+                </p>
+                <div class="description-right">
+                    <p class="description-right-sale">
+                        cкидка до 30 февраля
+                    </p>
+                    <p class="description-right-note">
+                        для записи по специальной цене нажмите кнопку!
+                    </p>
+                </div>
+            </div>
+            <div class="banner-button-container" id="online">
+                <a href="https://dikidi.net/537247?p=1.pi-po" target="_blank" class="banner-button open-module-btn">
+                    ОНЛАЙН-ЗАПИСЬ
+                </a>
+            </div>
+            <div class="banner__info">
+                <div class="info-adress">
+                    <p class="info-adress-title">Наши адреса:</p>
+                    <div class="info-adress-dybenko">
+                        <div class="dybenko-title">
+                            <img src="assets/icons/metro-icon.svg" alt="metro-icon">
+                            <p class="dybenko-title-bold">Дыбенко</p>
+                        </div>
+                        <p class="dybenko-adress">
+                            ул. Пражская, д. 3
+                        </p>
+                    </div>
+                    <div class="info-adress-bolshevikov">
+                        <div class="bolshevikov-title">
+                            <img src="assets/icons/metro-icon.svg" alt="metro-icon">
+                            <p class="bolshevikov-title-bold">Большевиков</p>
+                        </div>
+                        <p class="bolshevikov-adress">
+                            Ворошилова 27/2
+                        </p>
+                    </div>
+                </div>
+                <div class="info-phone">
+                    <p class="phone-title">
+                        Телефон для записи:
+                    </p>
+                    <a href="tel:+79006302946" style="text-decoration: none;">
+                        <p class="phone-number">
+                            8 (900) 630 29 46
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="vertical-flex">
+                <div class="oneslider">
+                    <div class="banner-slider">
+                        <div class="number-one" id="one">
+                            <img class="girl1" src="assets/images/girl1.png" alt="">
+                        </div>
+                        <div class="number-two" id="two">
+                            <img class="girl2" src="assets/images/girl2.png" alt="">
+                        </div>
+                        <div class="number-three" id="three">
+                            <img class="girl3" id="girl-three" src="assets/images/girl3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="about" id="about">
+            <div class="container about-container">
+                <img class="girl" src="assets/images/girl4.png" alt="girl">
+                <h3 class="about-title">
+                    Студия Daisy-lashes
+                </h3>
+                <p class="about-text">
+                    Мы рады приветствовать всех на нашем сайте!<br>
+                    Меня зовут Анна Сальникова основатель домашней студии Daisy-lashes и я приглашаю <br>
+                    всех ощутить на себе искусство преображения в атмосфере уюта и <br>доброжелательности. Мы радуем
+                    своих
+                    клиентов индивидуальным подходом к <br>
+                    преображению внешности и высоким уровнем обслуживания. Мастера искренне любят <br>
+                    свою профессию и с удовольствием помогут вам стать прекраснее и совершеннее.<br>
+                    Внимательно выслушают ваши пожелания и обязательно сделают все для того, чтобы <br>
+                    оставить у вас самые приятные впечатления.Одна из
+                    наших задач для наших дорогих <br>
+                    клиентов создать такое место, куда будут приходить не просто за
+                    непосредственно <br> услугами, но и просто поболтать с мастером о последних новых тенденциях, выпить
+                    <br>
+                    чашку-другую бодрящего чая или ароматного кофе и интересно провести время.
+                </p>
+                <h3 class="about-subtitle">
+                    Почему стоит выбрать домашнюю студию Daisy lashes
+                </h3>
+                <p class="about-text">
+                    Мы работаем только с материалами качества Люкс. Наши приоритеты-безопасность,<br>
+                    комфорт, качество услуг и время. Используем ортопедическую кушетку и одноразовые<br>
+                    расходники. Индивидуальное моделирование под ваши глазки. Узкая специализация <br>
+                    позволяет нам оказывать услуги отличного качества по честной цене. В Daisy Lashes Вы <br>
+                    можете выбрать реснички потоньше или потолще, сделать глазки более<br>
+                    выразительными или слегка подчеркнуть природную красоту.
+                </p>
+                
+            </div>
+        </section>
+        <section class="advantage" id="advantage">
+            <div class="container">
+                <div class="advantage__card">
+                    <img class="card__image" src="assets/icons/eyes.svg" alt="eyes-icon">
+                    <p class="card__title">Красота</p>
+                    <p class="card__subscription">Мы знаем все о красоте ресниц и подберем то, что <br>
+                        подойдет именно вам. Индивидуальный подход, <br>
+                        естественность и никаких шаблонных техник.</p>
+                </div>
+                <div class="advantage__card">
+                    <img class="card__image" src="assets/icons/eyes.svg" alt="eyes-icon">
+                    <p class="card__title">Надолго</p>
+                    <p class="card__subscription">Средний срок носки нарощенных ресниц – 4-5 <br> недель, но иногда
+                        достигает 8 недель</p>
+                </div>
+                <div class="advantage__card">
+                    <img class="card__image" src="assets/icons/eyes.svg" alt="eyes-icon">
+                    <p class="card__title">Безопасность</p>
+                    <p class="card__subscription">Приоритет при проведении процедур нашим <br>
+                        клиентам, мы всегда используем только <br>
+                        одноразовые расходные материалы, инструменты<br>
+                        проходят все этапы стерилизации и открываются<br> при вас.</p>
+                </div>
+                <div class="advantage__card">
+                    <img class="card__image" src="assets/icons/eyes.svg" alt="eyes-icon">
+                    <p class="card__title">Качество</p>
+                    <p class="card__subscription">Особое внимание мы уделяем подбору материалов <br>
+                        и не экономим на них, используя только самые <br>
+                        проверенные профессиональные средства.</p>
+                </div>
+                <div class="advantage__card">
+                    <img class="card__image" src="assets/icons/eyes.svg" alt="eyes-icon">
+                    <p class="card__title">Лучшие мастера</p>
+                    <p class="card__subscription">Наши мастера проходят отбор у судьи <br>
+                        международных чемпионатов по наращиванию<br>
+                        ресниц. Имеют опыт работы от 3 лет и знают все о <br>
+                        техниках, эффектах, приемах и новинках в lash- и <br>
+                        brow-индустрии.</p>
+                </div>
+                <div class="advantage__card">
+                    <img class="card__image" src="assets/icons/eyes.svg" alt="eyes-icon">
+                    <p class="card__title">Комфортно</p>
+                    <p class="card__subscription">В Daisy-lashes рождается красота, пока ты спишь<br>
+                        на удобной кушетке, укутанная уютным пледом</p>
+                </div>
+            </div>
+        </section>
+        <section class="price" id="price">
+            <h2 class="price-title">Наши цены</h2>
+            <div class="price-container">
+                <div class="container__left">
+                    <h3 class="left-title">
+                        Наращивание, коррекция и снятие ресниц
+                    </h3>
+                    <div class="left__cards">
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Наращивание уголков</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 1000₽<br>
+                                    Топ мастер - 1200₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Экспресс наращивание</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 1200₽<br>
+                                    Топ мастер - 1400₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Классический объем</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 1400₽<br>
+                                    Топ мастер - 1800₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Полуторный объем</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 1500₽<br>
+                                    Топ мастер - 2000₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Двойной объем</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 1600₽<br>
+                                    Топ мастер - 2200₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Тройной объем</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 1800₽<br>
+                                    Топ мастер - 2400₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Голливуд (4,5д)</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 2000₽<br>
+                                    Топ мастер - 2600₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Коррекция нарощенных ресниц</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Мастер - 1200₽<br>
+                                    Топ мастер - 1400₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Снятие ресниц другого мастера</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">300₽<br>
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Снятие нашей работы с <br>
+                                    последующим наращиванием</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">Бесплатно</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__right">
+                    <h3 class="right-title">
+                        Моделирование бровей
+                    </h3>
+                    <div class="card__item">
+                        <div class="item-left">
+                            <p class="item-title">Коррекция бровей в <br>
+                                рамках имеющейся формы</p>
+                        </div>
+                        <div class="item-right">
+                            <p class="item-price">Топ мастер - 400₽</p>
+
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <div class="item-left">
+                            <p class="item-title">Окрашивание ресниц или <br>
+                                бровей краской или хной</p>
+                        </div>
+                        <div class="item-right">
+                            <p class="item-price">Топ мастер - 600₽</p>
+
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <div class="item-left">
+                            <p class="item-title">Моделирование и окрашивание <br>
+                                бровей хной или краской</p>
+                        </div>
+                        <div class="item-right">
+                            <p class="item-price">Топ мастер - 1000₽</p>
+
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <div class="item-left">
+                            <p class="item-title">Долговременная укладка бровей <br>
+                                - только укладка (ламинирование)</p>
+                        </div>
+                        <div class="item-right">
+                            <p class="item-price">Топ мастер - 1500₽</p>
+
+                        </div>
+                    </div>
+                    <div class="card__item">
+                        <div class="item-left">
+                            <p class="item-title">Долговременная укладка бровей 3в1
+                                коррекция, окрашивание,
+                                укладка (ламинирование)</p>
+                        </div>
+                        <div class="item-right">
+                            <p class="item-price">Топ мастер - 2000₽</p>
+
+                        </div>
+                    </div>
+                    <div class="lamination-cards">
+                        <h3 class="card-lamination-title">Ламинирование ресниц</h3>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Ламинирование ресниц</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">1700₽</p>
+
+                            </div>
+                        </div>
+                        <div class="card__item">
+                            <div class="item-left">
+                                <p class="item-title">Ламинирование ресниц + ботокс</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-price">2100₽</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-container">
+                <h3 class="portfolio-title">
+                    Наше портфолио
+                </h3>
+                <div class="portfolio-slider wrapper">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work1.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work1.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work2.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work2.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work3.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work3.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work4.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work4.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work5.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work5.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work6.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work6.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work7.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work7.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work8.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work8.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work9.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work9.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work10.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work10.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work11.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work11.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work12.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work12.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery2" href="assets/images/otzivi/work13.jpg">
+                                    <img class="swiper-slide-image"
+                                    src="assets/images/otzivi/work13.jpg"
+                                    alt="slider-image">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <img class="swiper-button-prev" src="assets/icons/arrow-left.svg" alt="arrow-left">
+                        <img class="swiper-button-next" src="assets/icons/arrow-right.svg" alt="arrow-right>
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="otzivi">
+            <div class="reviews-container">
+                <h3 class="reviews-title">
+                    Отзывы наших клиентов
+                </h3>
+                <div class="reviews-slider wrapper">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews1.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews1.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews2.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews2.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews3.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews3.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews4.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews4.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews5.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews5.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews6.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews6.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews7.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews7.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews8.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews8.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews9.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews9.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews10.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews10.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews11.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews11.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews12.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews12.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews13.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews13.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews14.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews14.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews15.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews15.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews16.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews16.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-zoom-container test">
+                                <a class="swiper-slide swiper-zoom-container" data-fslightbox="gallery1" href="assets/images/reviews/reviews17.jpeg">
+                                    <img class="swiper-slide-image"
+                                        src="assets/images/reviews/reviews17.jpeg"
+                                        alt="slider-image">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <img class="swiper-button-prev" src="assets/icons/arrow-left.svg" alt="arrow-left">
+                        <img class="swiper-button-next" src="assets/icons/arrow-right.svg" alt="arrow-right>
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="footer">
+            <div class="container footer-container">
+                <div class="footer__left">
+                    <iframe class="map-kudrovo"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1670.0460426281904!2d30.50909970580981!3d59.90853985662998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962e620feddd29%3A0xdc4c131202e394d1!2z0YPQuy4g0J_RgNCw0LbRgdC60LDRjywgMywg0JrRg9C00YDQvtCy0L4sINCb0LXQvdC40L3Qs9GA0LDQtNGB0LrQsNGPINC-0LHQuy4sIDE4ODY5Mg!5e0!3m2!1sru!2sru!4v1676966971474!5m2!1sru!2sru"
+                        width="514" height="514" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                </div>
+                <div class="footer__right">
+                    <div class="right__top">
+                        <h2 class="right__title">
+                            Адреса наших студий:
+                        </h2>
+                        <div class="logo">
+                            <a href="https://vk.com/daisy_laches"><img src="assets/icons/vk.svg" alt="vk-logo" class="right__vk"></a>
+                            <a href="https://www.instagram.com/lashmaker_salnikova/"><img src="assets/icons/instagram.svg" alt="inst-logo" class="right__inst"></a>
+                        </div>
+                        <img src="assets/icons/vasilyev-logo.svg" alt="footer-logo" class="footer-logo">
+                    </div>
+                    <div class="right__adress_dybenko">
+                        <span> Студия на Дыбенко:</span> <br>
+                        г. Санкт-Петербург, м Дыбенко, ул. Пражская, д. 3
+                    </div>
+                    <div class="right__adress_bolshevikov">
+                        <span> Студия на Большевиков:</span> <br>
+                        г. Санкт-Петербург, м. Большевиков, ул. Ворошилова 27/2
+                    </div>
+                    <div class="right__contacts">
+                        <a href="tel:+79006302946" style="text-decoration: none;"><p class="contacts-number">8 (900) 630 29 46</p></a>
+                        <a href="https://dikidi.net/537247?p=1.pi-po"  target="_blank" class="contacts-link open-module-btn">ОНЛАЙН-ЗАПИСЬ</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/fslightbox.js"></script>
+    <script src="js/swiper.js"></script>
+    
+    
+    
+</body>
+
+</html>
